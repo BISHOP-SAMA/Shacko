@@ -7,9 +7,9 @@ tailwind-merge | Utility for merging Tailwind classes
 
 ## Notes
 Tailwind Config - extend fontFamily:
-fontFamily:{
-display:["'Bangers'","cursive","var(--font-display)"],// Fun cartoon font
-body:["'Fredoka'","sans-serif","var(--font-body)"]，1/ Rounded playful body font
+fontFamily: {
+  display: ["'Bangers'", "cursive", "var(--font-display)"], // Fun cartoon font
+  body: ["'Fredoka'", "sans-serif", "var(--font-body)"], // Rounded playful body font
 }
-Images are Located at /images/(e.g.,/images/hero-shark.png)
+Images are located at /images/ (e.g., /images/hero-shark.png)
 API Endpoint for registration: POST /api/register
