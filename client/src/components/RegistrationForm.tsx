@@ -6,7 +6,6 @@ import { ComicButton } from "@/components/ui/comic-button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
-import formImage from "@assets/Picsart_26-01-29_02-38-06-168_upscaled_1769650890981.png";
 
 export function RegistrationForm() {
   const { mutate, isPending } = useCreateRegistration();
@@ -28,7 +27,7 @@ export function RegistrationForm() {
 
   return (
     <div className="w-full max-w-md mx-auto relative z-10">
-      {/* Form Image */}
+      {/* Form Hero Image */}
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -36,9 +35,9 @@ export function RegistrationForm() {
         className="flex justify-center mb-6"
       >
         <img 
-          src={formImage} 
+          src="/images/form-shark.png" 
           alt="Fill the form!" 
-          className="w-64 h-auto object-contain drop-shadow-lg"
+          className="w-64 sm:w-48 h-auto object-contain drop-shadow-lg"
         />
       </motion.div>
 
@@ -59,6 +58,7 @@ export function RegistrationForm() {
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+            {/* Wallet Address */}
             <FormField
               control={form.control}
               name="walletAddress"
@@ -83,6 +83,7 @@ export function RegistrationForm() {
               )}
             />
 
+            {/* X / Twitter Username */}
             <FormField
               control={form.control}
               name="xUsername"
@@ -108,6 +109,7 @@ export function RegistrationForm() {
               )}
             />
 
+            {/* Discord Username */}
             <FormField
               control={form.control}
               name="discordUsername"
@@ -132,10 +134,10 @@ export function RegistrationForm() {
                 </FormItem>
               )}
             />
-            
+
             <ComicButton 
               type="submit" 
-              className="w-full" 
+              className={`w-full ${isPending ? "opacity-50 cursor-not-allowed" : ""}`} 
               size="lg"
               disabled={isPending}
               data-testid="button-submit-registration"
