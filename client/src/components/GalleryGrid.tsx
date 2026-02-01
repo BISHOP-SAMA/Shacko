@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import stakingImage from "@assets/Picsart_26-01-28_07-57-32-342_upscaled_1769584018820.png";
-import theatreImage from "@assets/Picsart_26-01-28_07-49-09-186_upscaled_1769584018861.png";
-import pumpImage from "@assets/Picsart_26-01-28_07-59-31-680_upscaled_1769584018899.png";
 
 interface GalleryImage {
   src: string;
@@ -15,21 +11,21 @@ interface GalleryImage {
 
 const images: GalleryImage[] = [
   { 
-    src: stakingImage, 
+    src: "/images/staking-shark.png", 
     alt: "Staking", 
     span: "col-span-1 md:col-span-2 row-span-2",
     description: "Stake your SHACKO tokens",
     comingSoon: true
   },
   { 
-    src: theatreImage, 
+    src: "/images/shark-cinema.png", 
     alt: "SHACKO Theatre", 
     span: "col-span-1 md:col-span-2",
     description: "Grow, feed & customise your shacks",
     comingSoon: true
   },
   { 
-    src: pumpImage, 
+    src: "/images/shacko-pump.png", 
     alt: "Shacko Pump", 
     span: "col-span-1 md:col-span-2",
     description: "Your trusted companion that will help you navigate the Crypto market like a pro",
@@ -39,12 +35,7 @@ const images: GalleryImage[] = [
 
 const container = {
   hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
+  show: { opacity: 1, transition: { staggerChildren: 0.1 } }
 };
 
 const item = {
