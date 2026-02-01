@@ -11,7 +11,7 @@ interface GalleryImage {
 
 const images: GalleryImage[] = [
   { 
-    src: "/images/staking-shark.png", 
+    src: "/images/staking-shark.jpg", 
     alt: "Staking", 
     span: "col-span-1 md:col-span-2 row-span-2",
     description: "Stake your SHACKO tokens",
